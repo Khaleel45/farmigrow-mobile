@@ -939,7 +939,7 @@ class _DashboardScreenState extends State<DashboardScreen> {
                   children: [
                     Text('Select Pond', style: AppTheme.h1()),
                     const Spacer(),
-                    Text('\${_userPonds.length} total', style: AppTheme.bodySmall()),
+                    Text('${_userPonds.length} total', style: AppTheme.bodySmall()),
                   ],
                 ),
               ),
@@ -972,7 +972,7 @@ class _DashboardScreenState extends State<DashboardScreen> {
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
                                 Text(p.name, style: AppTheme.h3()),
-                                Text('\${p.species} · \${p.areaAcres} acres',
+                                Text('${p.species} · ${p.areaAcres} acres',
                                     style: AppTheme.caption()),
                               ],
                             )),
@@ -1021,7 +1021,7 @@ class _DashboardScreenState extends State<DashboardScreen> {
                               Text(pond?.name ?? 'No ponds yet',
                                   style: AppTheme.h1().copyWith(fontSize: 16)),
                               Text(pond != null
-                                  ? '\${pond.species} · \${pond.areaAcres} acres'
+                                  ? '${pond.species} · ${pond.areaAcres} acres'
                                   : 'Tap + Add Pond to get started',
                                   style: AppTheme.bodySmall()),
                             ],
@@ -1033,7 +1033,7 @@ class _DashboardScreenState extends State<DashboardScreen> {
                               borderRadius: BorderRadius.circular(10),
                             ),
                             child: Row(mainAxisSize: MainAxisSize.min, children: [
-                              Text('\${_userPonds.length} ponds',
+                              Text('${_userPonds.length} ponds',
                                   style: AppTheme.caption().copyWith(color: Colors.blue)),
                               const SizedBox(width: 2),
                               const Icon(Icons.unfold_more, size: 14, color: Colors.blue),
