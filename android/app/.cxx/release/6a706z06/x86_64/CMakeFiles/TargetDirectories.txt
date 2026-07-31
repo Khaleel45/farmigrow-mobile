@@ -1,0 +1,2 @@
+C:/FarmiGrow/mobile/android/app/.cxx/release/6a706z06/x86_64/CMakeFiles/edit_cache.dir
+C:/FarmiGrow/mobile/android/app/.cxx/release/6a706z06/x86_64/CMakeFiles/rebuild_cache.dir

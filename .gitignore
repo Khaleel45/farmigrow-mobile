@@ -1,0 +1,8 @@
+﻿build/
+.dart_tool/
+.gradle/
+*.apk
+*.aab
+*.keystore
+*.jks
+google-services.json

@@ -1,0 +1,1 @@
+C:\FarmiGrow\mobile\android\app\build\intermediates\cxx\release\6a706z06\obj\x86_64
