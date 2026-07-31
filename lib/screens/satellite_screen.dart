@@ -386,19 +386,19 @@ class _SatelliteScreenState extends State<SatelliteScreen> {
 
       // Show zone-aware result
       if (hotspots.isNotEmpty && summary.isNotEmpty) {
-        // Hotspot detected — show the zone alert prominently
         _showZoneAlertDialog(summary, hotspots, updatedFarm, zonesScanned, weather);
       } else {
+        final sentinelUsed = result['sentinel_available'] == true;
         ScaffoldMessenger.of(context).showSnackBar(
           SnackBar(
             content: Text(
-              '✅ Scan complete! ($zonesScanned zones analysed)\n'
+              '✅ Scan complete!\n'
+              '${sentinelUsed ? "🛰️ Real Sentinel-2 satellite data" : "🌤️ Weather-based estimate (no cloud-free satellite pass)"}\n'
               'Health: $healthScore% · Water: $waterStress\n'
               'Pest: $pestPercent% · Disease: $diseaseLevel\n'
-              '${summary.isNotEmpty ? summary : "All zones look healthy."}\n'
               '🌡️ ${weather["temperature"] ?? "-"}°C · 💧${weather["humidity"] ?? "-"}% humidity',
             ),
-            backgroundColor: AppTheme.primaryGreen,
+            backgroundColor: sentinelUsed ? AppTheme.primaryGreen : AppTheme.amber,
             duration: const Duration(seconds: 6),
           ),
         );
